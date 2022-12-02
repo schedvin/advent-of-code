@@ -6,9 +6,10 @@ import (
   "advent/helpers"
 )
 
+
 func main() {
 
-  lines, _ := helpers.ReadLines("./puzzle-input")
+  lines, _ := helpers.ReadLines("../puzzle-input")
 
   var max int
 
