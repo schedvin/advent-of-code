@@ -1,33 +1,16 @@
 package main
 
 import (
-	"bufio"
 	"fmt"
-	"os"
 	"strconv"
+  "advent/helpers"
 )
-
-func shouldPanic(e error) {
-  if e != nil {
-    panic(e)
-  }
-}
 
 func main() {
 
-  file, err := os.Open("./puzzle-input")
+  lines, _ := helpers.ReadLines("./puzzle-input")
 
-  shouldPanic(err)
-
-  scanner := bufio.NewScanner(file)
-  scanner.Split(bufio.ScanLines)
-
-  var lines []string
   var max int
-
-  for scanner.Scan() {
-    lines = append(lines, scanner.Text())
-  }
 
   total := 0
 
